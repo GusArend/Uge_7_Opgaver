@@ -6,14 +6,19 @@ namespace Uge_7_Opgaver
     {
         static void Main(string[] args)
         {
-            int assignments = 3;
             
+            string[] assignments = ["1. Opgave 1.1", "2. Opgave 1.2", "3. Opgave 1.3", "4. Opgave 2.1", "5. Opgave 2.2", "6. Opgave 2.3"];
 
             while (true)
             {
-                Console.WriteLine("");
-                Console.Write("Hello, There are: " + assignments + " assignments, choose one by pressing a number: ");
+                Console.WriteLine("Hello, There are: " + assignments.Length + " assignments, choose one by pressing a number: ");
+                foreach (string assignment in assignments)
+                {
+                    Console.WriteLine(assignment);
+                }
+
                 int userChoice = int.Parse(Console.ReadLine());
+                Console.WriteLine("\n -------------------------------------------------------- \n");
 
                 // opgave 1.1
                 if (userChoice == 1)
@@ -27,14 +32,15 @@ namespace Uge_7_Opgaver
                    
                     double sum = height * width;
                     Console.WriteLine("The area is: " + sum);
+                    Console.WriteLine("\n -------------------------------------------------------- \n");
                 }
                 // opgave 1.2
                 else if (userChoice == 2)
                 {
                     Console.WriteLine("Let me calculate the angle between two coordinates: ");
-                    Console.Write("Enter the first coordinate as two number seperated by a . (ex. 1.1):");
+                    Console.Write("Enter the first coordinate as two number seperated by a . (ex. 1.1): ");
                     string firstCoord = Console.ReadLine();
-                    Console.Write("Enter the second coordinate as two number seperated by a . (ex. 2.9):");
+                    Console.Write("Enter the second coordinate as two number seperated by a . (ex. 2.9): ");
                     string secondCoord = Console.ReadLine();
                
                     int x1 = int.Parse(firstCoord.Split(".")[0]);
@@ -44,15 +50,16 @@ namespace Uge_7_Opgaver
                     int sum = (y2 - y1) / (x2 - x1);
 
                     Console.WriteLine("The angle is: " + sum);
+                    Console.WriteLine("\n -------------------------------------------------------- \n");
                 }
                 // opgave 1.3
                 else if (userChoice == 3)
                 {
                     Console.WriteLine("Let me calculate the angle between two coordinates: ");
 
-                    Console.Write("Enter the first coordinate as two number seperated by a . (ex. 1.1):");
+                    Console.Write("Enter the first coordinate as two number seperated by a . (ex. 1.1): ");
                     string firstCoord = Console.ReadLine();
-                    Console.Write("Enter the second coordinate as two number seperated by a . (ex. 2.9):");
+                    Console.Write("Enter the second coordinate as two number seperated by a . (ex. 2.9): ");
                     string secondCoord = Console.ReadLine();
               
                     double x1 = double.Parse(firstCoord.Split(".")[0]);
@@ -62,6 +69,7 @@ namespace Uge_7_Opgaver
                     double sum = (y2 - y1) / (x2 - x1);
 
                     Console.WriteLine("The angle is: " + sum);
+                    Console.WriteLine("\n -------------------------------------------------------- \n");
                 }
                 // opgave 2.1
                 else if (userChoice== 4)
@@ -75,6 +83,7 @@ namespace Uge_7_Opgaver
                         return;
                     }
                     Console.WriteLine(input.Length + " characters (including spaces)");
+                    Console.WriteLine("\n -------------------------------------------------------- \n");
                 }
                 // opgave 2.2
                 else if (userChoice == 5)
@@ -88,6 +97,7 @@ namespace Uge_7_Opgaver
                     int endIndex = int.Parse(Console.ReadLine());
 
                     Console.WriteLine(sentence.Substring(startIndex, endIndex));
+                    Console.WriteLine("\n -------------------------------------------------------- \n");
                 }
                 // opgave 2.3
                 else if(userChoice == 6)
@@ -101,10 +111,12 @@ namespace Uge_7_Opgaver
                     if (sentence.IndexOf(index) != -1)
                     {
                         Console.WriteLine(sentence.IndexOf(index));
+                        Console.WriteLine("\n -------------------------------------------------------- \n");
                     }
                     else
                     {
                         Console.WriteLine("Character not found!");
+                        Console.WriteLine("\n -------------------------------------------------------- \n");
                     }
                     
                 }
