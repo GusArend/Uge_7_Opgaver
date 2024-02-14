@@ -104,7 +104,7 @@ namespace Uge_7___Opgaver
                     }
                     else
                     {
-                        Console.WriteLine("Letter not found!");
+                        Console.WriteLine("Character not found!");
                     }
                     
                 }
