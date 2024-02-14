@@ -1,6 +1,6 @@
 ﻿
 
-namespace Uge_7___Opgaver
+namespace Uge_7_Opgaver
 {
     internal class Program
     {
