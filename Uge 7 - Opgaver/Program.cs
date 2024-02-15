@@ -11,7 +11,7 @@ namespace Uge_7_Opgaver
 
             while (true)
             {
-                Console.WriteLine("Hello, There are: " + assignments.Length + " assignments, choose one by pressing a number: ");
+                Console.WriteLine("Hello! There are: " + assignments.Length + " assignments, choose one by pressing a number: ");
                 foreach (string assignment in assignments)
                 {
                     Console.WriteLine(assignment);
@@ -102,15 +102,15 @@ namespace Uge_7_Opgaver
                 // opgave 2.3
                 else if(userChoice == 6)
                 {
-                    string sentence = "Choose a character to search for in this sentence you want the index of. ";
+                    string sentence = "Choose a character in this sentence you want the index of. ";
                     Console.WriteLine(sentence);
 
                     Console.Write("Character: ");
-                    string index = Console.ReadLine();
+                    char character = char.Parse(Console.ReadLine());
 
-                    if (sentence.IndexOf(index) != -1)
+                    if (sentence.IndexOf(character) != -1)
                     {
-                        Console.WriteLine(sentence.IndexOf(index));
+                        Console.WriteLine(sentence.IndexOf(character));
                         Console.WriteLine("\n -------------------------------------------------------- \n");
                     }
                     else
@@ -119,7 +119,7 @@ namespace Uge_7_Opgaver
                         Console.WriteLine("\n -------------------------------------------------------- \n");
                     }
                     
-                }
+                } else { break; }
             }
 
         }
