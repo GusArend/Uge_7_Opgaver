@@ -78,10 +78,6 @@ namespace Uge_7_Opgaver
                     Console.Write("Type your sentence: ");
                     string input = Console.ReadLine();
 
-                    if (input.Length <= 0)
-                    {
-                        return;
-                    }
                     Console.WriteLine(input.Length + " characters (including spaces)");
                     Console.WriteLine("\n -------------------------------------------------------- \n");
                 }
